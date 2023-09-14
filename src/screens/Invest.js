@@ -23,7 +23,7 @@ const Invest = () => {
           /> */}
           <CategoryCard
             logo_uri={require('../assets/icons/solarIcon.png')}
-            bg_uri={require('../assets/backgrounds/solarBackground.jpg')}
+            bg_uri={require('../assets/backgrounds/solarBackground2.jpg')}
             bg_color={'#fefbd8'}
             text={'Solar'}
             textColor={'#fc9c04'}
@@ -31,7 +31,7 @@ const Invest = () => {
           />
           <CategoryCard
             logo_uri={require('../assets/icons/windIcon.png')}
-            bg_uri={require('../assets/backgrounds/windmillBackground.jpg')}
+            bg_uri={require('../assets/backgrounds/windmillBackground2.jpg')}
             bg_color={'#e2effb'}
             text={'Wind'}
             textColor={'#4a4778'}
@@ -41,7 +41,7 @@ const Invest = () => {
         <View style={styles.block}>
           <CategoryCard
             logo_uri={require('../assets/icons/thermalIcon.png')}
-            bg_uri={require('../assets/backgrounds/thermalBackground.jpg')}
+            bg_uri={require('../assets/backgrounds/thermalBackground2.jpg')}
             bg_color={'#fadad0'}
             text={'Geo-Thermal'}
             textColor={'#cc340a'}
@@ -49,7 +49,7 @@ const Invest = () => {
           />
           <CategoryCard
             logo_uri={require('../assets/icons/nuclearIcon.png')}
-            bg_uri={require('../assets/backgrounds/nuclearBackground.jpg')}
+            bg_uri={require('../assets/backgrounds/bioBackground.jpg')}
             bg_color={'#feedcd'}
             text={'Bio-Mass / Bio-Gas'}
             textColor={'#dc8c04'}
@@ -59,7 +59,7 @@ const Invest = () => {
         <View style={styles.block}>
           <CategoryCard
             logo_uri={require('../assets/icons/solarIcon.png')}
-            bg_uri={require('../assets/backgrounds/solarBackground.jpg')}
+            bg_uri={require('../assets/backgrounds/hydroBackground.jpg')}
             bg_color={'#fefbd8'}
             text={'Hydro Energy'}
             textColor={'#fc9c04'}
@@ -67,7 +67,7 @@ const Invest = () => {
           />
           <CategoryCard
             logo_uri={require('../assets/icons/windIcon.png')}
-            bg_uri={require('../assets/backgrounds/windmillBackground.jpg')}
+            bg_uri={require('../assets/backgrounds/nuclearBackground2.jpg')}
             bg_color={'#e2effb'}
             text={'Nuclear'}
             textColor={'#4a4778'}

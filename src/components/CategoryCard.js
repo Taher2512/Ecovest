@@ -20,7 +20,13 @@ const CategoryCard = ({
   const navigation = useNavigation();
 
   return (
-    <View style={[styles.container(bg_color), styles.shadow]}>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('Projects', {
+          project,
+        })
+      }
+      style={[styles.container(bg_color), styles.shadow]}>
       <ImageBackground
         source={bg_uri}
         resizeMode="cover"
@@ -30,13 +36,7 @@ const CategoryCard = ({
           height: '100%',
           width: '100%',
         }}>
-        <TouchableOpacity
-          onPress={() =>
-            navigation.navigate('Projects', {
-              project,
-            })
-          }
-          style={styles.buttonContainer}>
+        <View style={styles.buttonContainer}>
           <View style={{top: 0}}>
             {/* <Image
               source={require('../assets/icons/invest.png')}
@@ -52,15 +52,18 @@ const CategoryCard = ({
           <View
             style={{
               width: '101.3%',
-              height: 40,
+              top: -3,
+              height: 30,
               borderRadius: 32,
               borderTopLeftRadius: 0,
               borderTopRightRadius: 0,
               backgroundColor: '#558B2F',
               ...styles.shadow,
-              flexDirection: 'row',
               alignItems: 'center',
-              justifyContent: 'space-evenly',
+              justifyContent: 'center',
+              borderBottomWidth: 1,
+              borderLeftWidth: 1,
+              borderRightWidth: 1,
             }}>
             {/* <Image
               source={require('../assets/icons/addCategory.png')}
@@ -75,14 +78,14 @@ const CategoryCard = ({
               style={{
                 fontWeight: 700,
                 color: '#fff',
-                fontSize: 17,
+                fontSize: 15,
               }}>
               {text}
             </Text>
           </View>
-        </TouchableOpacity>
+        </View>
       </ImageBackground>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -110,6 +113,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: '#33691E',
     borderWidth: 1,
+    borderBottomWidth: 0,
   }),
 
   buttonContainer: {
@@ -117,7 +121,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     top: 25,
-    // borderWidth: 1,
   },
 
   text: textColor => ({

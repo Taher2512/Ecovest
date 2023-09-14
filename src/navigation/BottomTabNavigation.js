@@ -97,7 +97,7 @@ export default function BottomTabNavigation() {
           ...styles.shadow,
         },
       }}
-      initialRouteName="News">
+      initialRouteName="Portfolio">
       {/* <Tab.Screen
         name="News"
         component={News}

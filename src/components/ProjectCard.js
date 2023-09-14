@@ -1,5 +1,6 @@
 import {
   Image,
+  StyleSheet,
   Text,
   TouchableHighlight,
   TouchableHighlightBase,
@@ -17,10 +18,13 @@ const ProjectCard = ({project}) => {
   return (
     <Card mode="elevated" elevation={3} className="mx-4 my-4">
       <View
-        className="p-6  rounded-lg"
+        className="p-6 rounded-lg"
         style={{backgroundColor: theme.colors.primary}}>
-        <View className="absolute top-1/2 -left-3.5 p-1 rounded-full bg-green-200">
-          <TouchableOpacity onPress={() => setLiked(!liked)}>
+        <View className="absolute items-end right-0">
+          <TouchableOpacity
+            onPress={() => setLiked(!liked)}
+            className="bg-green-200 p-1.5 rounded-full -top-2 -right-1.5 border border-green-700"
+            style={{...styles.shadow}}>
             {liked ? (
               <Image
                 source={require('../assets/icons/like.png')}
@@ -81,7 +85,9 @@ const ProjectCard = ({project}) => {
           </Text>
         </View>
 
-        <TouchableOpacity className="flex-row justify-center mt-4">
+        <TouchableOpacity
+          className="flex-row justify-center mt-4"
+          style={{...styles.shadow}}>
           <View
             className="flex-row justify-around items-center p-1.5 rounded-lg px-4"
             style={{backgroundColor: theme.colors.secondary}}>
